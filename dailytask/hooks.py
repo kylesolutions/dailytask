@@ -118,13 +118,14 @@ app_license = "MIT"
 # ---------------
 # Hook on document methods and events
 
-# doc_events = {
-#	"*": {
-#		"on_update": "method",
-#		"on_cancel": "method",
-#		"on_trash": "method"
-#	}
-# }
+doc_events = {
+	"Task": {
+		"on_update": "dailytask.dailytask.customizations.task.task.on_update",
+	},
+	"Project":{
+     	"validate": "dailytask.dailytask.customizations.project.project.validate"
+    }
+}
 
 # Scheduled Tasks
 # ---------------
